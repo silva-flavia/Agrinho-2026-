@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo & Cidade - Ponte Verde</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header / Navegação -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>Campo&Cidade</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Início</a></li>
+                <li><a href="#about" class="nav-link">Sobre</a></li>
+                <li><a href="#products" class="nav-link">Produtos</a></li>
+                <li><a href="#impact" class="nav-link">Impacto</a></li>
+                <li><a href="#contact" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title animate-text">
+                Unindo o Melhor do <span class="highlight">Campo</span> e da <span class="highlight">Cidade</span>
+            </h1>
+            <p class="hero-subtitle">
+                Conectamos produtores rurais a consumidores urbanos, promovendo sustentabilidade, 
+                economia local e alimentação saudável.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="showProducts()">
+                    <i class="fas fa-shopping-basket"></i> Ver Produtos
+                </button>
+                <button class="btn btn-secondary" onclick="showImpact()">
+                    <i class="fas fa-chart-line"></i> Nosso Impacto
+                </button>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-card">
+                <div class="stat-number" data-target="150">0</div>
+                <div class="stat-label">Produtores Parceiros</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-target="2500">0</div>
+                <div class="stat-label">Famílias Atendidas</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-target="45">0</div>
+                <div class="stat-label">Toneladas de Resíduos Reciclados</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Como Funciona a <span class="highlight">Integração</span></h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                    <h3>Produtores Rurais</h3>
+                    <p>Agricultores familiares e pequenos produtores oferecem alimentos frescos, orgânicos e sem agrotóxicos diretamente para a cidade.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Logística Eficiente</h3>
+                    <p>Sistema de entregas programadas reduz emissões e garante produtos frescos na sua porta em até 24h após a colheita.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <h3>Consumidores Urbanos</h3>
+                    <p>Moradores da cidade compram direto do produtor, pagam menos e incentivam a economia local sustentável.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3>Logística Reversa</h3>
+                    <p>Restaurantes e feiras enviam resíduos orgânicos para compostagem no campo, fechando o ciclo sustentável.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Produtos <span class="highlight">Destaque</span></h2>
+            <div class="products-filter">
+                <button class="filter-btn active" data-category="all">Todos</button>
+                <button class="filter-btn" data-category="frutas">Frutas</button>
+                <button class="filter-btn" data-category="verduras">Verduras</button>
+                <button class="filter-btn" data-category="graos">Grãos</button>
+                <button class="filter-btn" data-category="laticinios">Laticínios</button>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Os produtos serão carregados via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Impacto Section -->
+    <section id="impact" class="impact">
+        <div class="container">
+            <h2 class="section-title">Nosso <span class="highlight">Impacto</span> Real</h2>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>+40%</h3>
+                    <p>na renda dos pequenos produtores</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3>-35%</h3>
+                    <p>no desperdício de alimentos</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <h3>98%</h3>
+                    <p>de satisfação dos consumidores</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>15.000</h3>
+                    <p>árvores plantadas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">O que dizem sobre <span class="highlight">nós</span></h2>
+            <div class="testimonials-slider" id="testimonialsSlider">
+                <!-- Depoimentos via JavaScript -->
+            </div>
+            <div class="slider-controls">
+                <button class="slider-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Receba nossa Newsletter</h3>
+                <p>Fique por dentro das novidades, receitas e ofertas especiais!</p>
+                <form id="newsletterForm" class="newsletter-form">
+                    <input type="email" id="newsletterEmail" placeholder="Seu melhor e-mail" required>
+                    <button type="submit" class="btn btn-primary">Inscrever-se</button>
+                </form>
+                <div id="newsletterMessage" class="newsletter-message"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="logo">
+                        <i class="fas fa-leaf"></i>
+                        <span>Campo&Cidade</span>
+                    </div>
+                    <p>Conectando o melhor do campo à comodidade da cidade, construindo um futuro mais sustentável para todos.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#products">Produtos</a></li>
+                        <li><a href="#impact">Impacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                    <p><i class="fas fa-envelope"></i> contato@campocidade.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> São Paulo, SP</p>
+                </div>
+                <div class="footer-hours">
+                    <h4>Horário de Atendimento</h4>
+                    <p>Segunda a Sexta: 8h - 18h</p>
+                    <p>Sábado: 8h - 12h</p>
+                    <p>Domingo: Fechado</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Campo&Cidade - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
